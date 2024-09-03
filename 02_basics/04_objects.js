@@ -64,3 +64,13 @@ console.log(Object.entries(tinderUser));
 
 console.log(tinderUser.hasOwnProperty('isLoggedIn'));
 
+const course={
+    courseName:"JS",
+    duration:"24",
+    courseIns:"Ans"
+}
+
+//console.log(courseIns);
+const{courseIns: instructor}=course
+console.log(instructor);
+
