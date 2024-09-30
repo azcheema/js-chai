@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TimeOut</title>
+</head>
+<body>
+    <h1>Proj 1</h1>
+    <button id="start">Start</button>
+    <button id="stop">Stop</button>
+</body>
+<script>
+
+    let intervalID;
+
+    const sayDate=function(str){
+        console.log(str, Date.now());   
+    }
+    const stInterval=function(){
+        intervalID=setInterval(sayDate, 1000, "Hi")
+    }
+    
+    const clrInterval=function(){
+        clearInterval(intervalID)
+    }
+
+    document.querySelector('#start').addEventListener('click', stInterval)
+
+    document.querySelector('#stop').addEventListener('click', clrInterval)
+
+</script>
+</html>
